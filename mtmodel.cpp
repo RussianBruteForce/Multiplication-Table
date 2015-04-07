@@ -32,7 +32,8 @@ QVariant MTModel::headerData(int section, Qt::Orientation orientation, int role)
 		if (base != MY_E)
 			return QString::number(list.at(list.size() -1 - section), base);
 		else
-			return QString::number(toE(list.size() -1 - list.at(section)),'G',precision);
+			//return QString::number(toE(list.size() -1 - list.at(section)),'G',precision);
+			return section+1;
 	}
 	return QVariant();
 }
