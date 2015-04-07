@@ -78,12 +78,12 @@ QString MTModel::mul(const u_int8_t& a, const u_int8_t& b) const
 	if (base != MY_E)
 		return QString::number(a*b,base);
 	else {
-		return  QString::number(toE(a*b),'f',precision);
+		return  QString::number(fromE(a*b),'f',precision);
 	}
 	return QString("NO DATA");
 }
 
-double MTModel::toE(u_int8_t x) const
+double MTModel::fromE(u_int8_t x) const
 {
 	return pow(x, M_E);
 }

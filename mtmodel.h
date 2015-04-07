@@ -36,7 +36,7 @@ private:
 	int precision;
 
 	QString mul(const u_int8_t &a,const u_int8_t &b) const;
-	double toE(u_int8_t x) const;
+	double fromE(u_int8_t x) const;
 };
 
 
